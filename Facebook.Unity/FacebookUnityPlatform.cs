@@ -28,6 +28,7 @@ namespace Facebook.Unity
         Android,
         IOS,
         WebGL,
+        WebCanvas,
         Arcade
     }
 }

@@ -78,7 +78,7 @@ namespace Facebook.MiniJSON
     public static class Json
     {
         // interpret all numbers as if they are english US formatted numbers
-        private static NumberFormatInfo numberFormat = (new CultureInfo("en-US")).NumberFormat;
+        //private static NumberFormatInfo numberFormat = (new CultureInfo("en-US")).NumberFormat;
 
         /// <summary>
         /// Parses the string json into a value.
@@ -430,10 +430,10 @@ namespace Facebook.MiniJSON
 
                 if (number.IndexOf('.') == -1)
                 {
-                    return long.Parse(number, numberFormat);
+                    return long.Parse(number);
                 }
 
-                return double.Parse(number, numberFormat);
+                return double.Parse(number);
             }
 
             private void EatWhitespace()

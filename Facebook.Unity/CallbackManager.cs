@@ -81,6 +81,11 @@ namespace Facebook.Unity
 
         private static bool TryCallCallback<T>(object callback, IResult result) where T : IResult
         {
+			if(!(result is T))
+			{
+				return false;
+			}
+
             var castedCallback = callback as FacebookDelegate<T>;
             if (castedCallback != null)
             {

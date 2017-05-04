@@ -182,8 +182,12 @@ namespace Facebook.Unity
                 case RuntimePlatform.IPhonePlayer:
                     return FacebookUnityPlatform.IOS;
                 case RuntimePlatform.WebGLPlayer:
-                    return FacebookUnityPlatform.WebGL;
-                case RuntimePlatform.WindowsPlayer:
+					return FacebookUnityPlatform.WebGL;
+#if UNITY_WEBCANVAS
+				case RuntimePlatform.WebCanvasPlayer:
+					return FacebookUnityPlatform.WebGL;
+#endif
+				case RuntimePlatform.WindowsPlayer:
                     return FacebookUnityPlatform.Arcade;
                 default:
                     return FacebookUnityPlatform.Unknown;

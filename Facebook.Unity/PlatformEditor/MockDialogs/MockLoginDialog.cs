@@ -38,17 +38,17 @@ namespace Facebook.Unity.Editor.Dialogs
 
         protected override void DoGui()
         {
-            GUILayout.BeginHorizontal();
-            GUILayout.Label("User Access Token:");
-            this.accessToken = GUILayout.TextField(this.accessToken, GUI.skin.textArea, GUILayout.MinWidth(400));
-            GUILayout.EndHorizontal();
-            GUILayout.Space(10);
-            if (GUILayout.Button("Find Access Token"))
-            {
-                Application.OpenURL(string.Format("https://developers.facebook.com/tools/accesstoken/?app_id={0}", FB.AppId));
-            }
-
-            GUILayout.Space(20);
+            //GUILayout.BeginHorizontal();
+            //GUILayout.Label("User Access Token:");
+            //this.accessToken = GUILayout.TextField(this.accessToken, GUI.skin.textArea, GUILayout.MinWidth(400));
+            //GUILayout.EndHorizontal();
+            //GUILayout.Space(10);
+            //if (GUILayout.Button("Find Access Token"))
+            //{
+            //    Application.OpenURL(string.Format("https://developers.facebook.com/tools/accesstoken/?app_id={0}", FB.AppId));
+            //}
+			//
+            //GUILayout.Space(20);
         }
 
         protected override void SendSuccessResult()
